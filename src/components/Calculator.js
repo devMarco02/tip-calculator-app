@@ -28,7 +28,7 @@ const Calculator = () => {
       setTipAmount(tipAmountPerPerson.toFixed(2));
       setTotal(totalPerPerson.toFixed(2));
     }
-  });
+  }, [custom, bill, tipPercent, peopleNum]);
 
   //add error class
   const isError = (e) => {
