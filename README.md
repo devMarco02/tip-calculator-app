@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/tip-calculator-app-using-react-and-sass-Oqxjkhtsb](https://www.frontendmentor.io/solutions/tip-calculator-app-using-react-and-sass-Oqxjkhtsb)
+- Live Site URL: [https://devmarco02-tip-calculator.netlify.app/](https://devmarco02-tip-calculator.netlify.app/)
 
 ## My process
 
