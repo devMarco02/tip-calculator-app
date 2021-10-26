@@ -1,0 +1,130 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $ff-primary;
+  background: $light-grayish-cyan;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  background: $lighter-grayish-cyan;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="number"]:focus {
+  outline: 3px solid $strong-cyan;
+}
+
+.calculator {
+  background: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  @include mq(xlarge) {
+    border-radius: 25px;
+  }
+
+  &__btns {
+    &.error input:last-child:focus {
+      outline: 3px solid #ed4337;
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      @include absolute($top: 50%, $left: 20px);
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    &--dollar::before {
+      background-image: url("./../../images/icon-dollar.svg");
+      width: 11px;
+      height: 17px;
+    }
+
+    &--person::before {
+      background-image: url("./../../images/icon-person.svg");
+      width: 13px;
+      height: 16px;
+    }
+
+    &.error {
+      position: relative;
+
+      & input:first-child:focus {
+        outline: 3px solid #ed4337;
+      }
+
+      &::after {
+        content: "Can't be zero";
+        @include absolute($top: -30px, $right: 0);
+        color: #ed4337;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__tip {
+    display: none;
+
+    &:checked + .calculator__btn-lbl {
+      background: $strong-cyan;
+      color: $very-dark-cyan;
+    }
+  }
+
+  &__btn-lbl {
+    background: $very-dark-cyan;
+    border-radius: 5px;
+    cursor: pointer;
+    @include on-event {
+      background: hsl(172, 67%, 75%);
+      color: $very-dark-cyan;
+    }
+  }
+
+  &__result-container {
+    background: $very-dark-cyan;
+    border-radius: 15px;
+  }
+
+  &__reset-btn {
+    background: $strong-cyan;
+    border-radius: 5px;
+    @include on-event {
+      background: hsl(172, 67%, 75%);
+      color: $very-dark-cyan;
+    }
+  }
+}

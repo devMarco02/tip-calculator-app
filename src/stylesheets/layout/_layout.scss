@@ -1,0 +1,103 @@
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 360px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  @media screen and (min-width: 1024px) and (min-height: 750px) {
+    margin: auto 0 85px;
+  }
+}
+
+.calculator {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  @include mq(xlarge) {
+    max-width: 920px;
+    padding: 30px 30px 30px 48px;
+  }
+
+  &__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    @include mq(xlarge) {
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    &--bigger-margin {
+      margin-bottom: 16px;
+      @include mq(xlarge) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    @include mq(xlarge) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__btn-lbl,
+  &__reset-btn {
+    padding: 12px 0;
+  }
+
+  &__result-container {
+    padding: 32px 25px 25px;
+    @include mq(xlarge) {
+      padding: 56px 40px 40px;
+      grid-column: 2/3;
+      grid-row: 1/4;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__reset-btn {
+    width: 100%;
+    margin-top: 18px;
+    @include mq(xlarge) {
+      margin-top: auto;
+    }
+  }
+}
+
+.attribution {
+  padding: 1rem;
+  background: $very-dark-cyan;
+}

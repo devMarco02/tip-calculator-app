@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: #c5e4e7;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  background: #f4fafa;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type=number]:focus {
+  outline: 3px solid #26c0ab;
+}
+
+.calculator {
+  background: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+@media (min-width: 1024px) {
+  .calculator {
+    border-radius: 25px;
+  }
+}
+.calculator__btns.error input:last-child:focus {
+  outline: 3px solid #ed4337;
+}
+.calculator__input-wrapper {
+  position: relative;
+}
+.calculator__input-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.calculator__input-wrapper--dollar::before {
+  background-image: url("./../../images/icon-dollar.svg");
+  width: 11px;
+  height: 17px;
+}
+.calculator__input-wrapper--person::before {
+  background-image: url("./../../images/icon-person.svg");
+  width: 13px;
+  height: 16px;
+}
+.calculator__input-wrapper.error {
+  position: relative;
+}
+.calculator__input-wrapper.error input:first-child:focus {
+  outline: 3px solid #ed4337;
+}
+.calculator__input-wrapper.error::after {
+  content: "Can't be zero";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  color: #ed4337;
+  font-size: 16px;
+  font-weight: 700;
+}
+.calculator__tip {
+  display: none;
+}
+.calculator__tip:checked + .calculator__btn-lbl {
+  background: #26c0ab;
+  color: #00494d;
+}
+.calculator__btn-lbl {
+  background: #00494d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.calculator__btn-lbl:hover, .calculator__btn-lbl:active, .calculator__btn-lbl:focus {
+  background: #95eadf;
+  color: #00494d;
+}
+.calculator__result-container {
+  background: #00494d;
+  border-radius: 15px;
+}
+.calculator__reset-btn {
+  background: #26c0ab;
+  border-radius: 5px;
+}
+.calculator__reset-btn:hover, .calculator__reset-btn:active, .calculator__reset-btn:focus {
+  background: #95eadf;
+  color: #00494d;
+}
+
+body {
+  font-size: 24px;
+}
+
+input {
+  text-align: end;
+  color: #00494d;
+}
+input::placeholder {
+  color: #7f9c9f;
+}
+
+.calculator__label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #5e7a7d;
+}
+.calculator input,
+.calculator button, .calculator__amount, .calculator__total {
+  font-weight: 700;
+}
+.calculator__btn-lbl {
+  color: #f4fafa;
+  text-align: center;
+  font-weight: 900;
+}
+.calculator__custom {
+  text-align: center;
+}
+.calculator__custom::placeholder {
+  color: #5e7a7d;
+}
+.calculator__label-container p:nth-child(1) {
+  color: #c5e4e7;
+  font-size: 15px;
+}
+.calculator__label-container p:nth-child(2) {
+  color: #7f9c9f;
+  font-size: 14px;
+  font-weight: 700;
+}
+.calculator__total, .calculator__amount {
+  color: #26c0ab;
+  font-size: 32px;
+}
+@media (min-width: 1024px) {
+  .calculator__total, .calculator__amount {
+    font-size: 48px;
+  }
+}
+.calculator__reset-btn {
+  color: #00494d;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+@media (min-width: 1024px) {
+  .attribution {
+    font-size: 14px;
+  }
+}
+.attribution__link {
+  color: #26c0ab;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 360px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+@media screen and (min-width: 1024px) and (min-height: 750px) {
+  .header {
+    margin: auto 0 85px;
+  }
+}
+
+.calculator {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+@media (min-width: 1024px) {
+  .calculator {
+    max-width: 920px;
+    padding: 30px 30px 30px 48px;
+  }
+}
+.calculator__form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 1024px) {
+  .calculator__form {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+.calculator__label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.calculator__label--bigger-margin {
+  margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  .calculator__label--bigger-margin {
+    margin-bottom: 20px;
+  }
+}
+.calculator__btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .calculator__btns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.calculator__btn-lbl, .calculator__reset-btn {
+  padding: 12px 0;
+}
+.calculator__result-container {
+  padding: 32px 25px 25px;
+}
+@media (min-width: 1024px) {
+  .calculator__result-container {
+    padding: 56px 40px 40px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.calculator__inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.calculator__reset-btn {
+  width: 100%;
+  margin-top: 18px;
+}
+@media (min-width: 1024px) {
+  .calculator__reset-btn {
+    margin-top: auto;
+  }
+}
+
+.attribution {
+  padding: 1rem;
+  background: #00494d;
+}
+
+/*# sourceMappingURL=main.css.map */

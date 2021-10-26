@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./stylesheets/main.scss";
+import Calculator from "./components/Calculator";
+import { Logo } from "./components/Icons";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main>
+      <header className="header">
+        <Logo />
       </header>
-    </div>
+
+      <Calculator />
+
+      <div className="attribution">
+        Challenge by{" "}
+        <a
+          className="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by{" "}
+        <a
+          className="attribution__link"
+          href="https://devmarco02.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          devMarco
+        </a>
+        .
+      </div>
+    </main>
   );
 }
 
