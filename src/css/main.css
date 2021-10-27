@@ -371,15 +371,20 @@ p {
   margin: 0;
 }
 
-input {
-  background: #f4fafa;
-  border: none;
-  border-radius: 5px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type=number] {
   -moz-appearance: textfield;
-  -webkit-appearance: none;
+}
+
+input {
+  background: #f4fafa;
+  border: none;
+  border-radius: 5px;
 }
 
 input[type=number]:focus {
