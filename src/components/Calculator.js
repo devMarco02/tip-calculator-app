@@ -8,6 +8,13 @@ const Calculator = () => {
   const [tipAmount, setTipAmount] = useState("");
   const [total, setTotal] = useState("");
 
+  //reset value if it's equal to 0
+  useEffect(() => {
+    if (peopleNum === 0) {
+      setPeopleNum("");
+    }
+  }, [peopleNum]);
+
   useEffect(() => {
     //remove check when adding custom value
     const tips = document.querySelectorAll(".calculator__tip");
@@ -18,7 +25,7 @@ const Calculator = () => {
     }
 
     //calculate
-    if (bill && tipPercent && peopleNum) {
+    if (bill > 0 && tipPercent > 0 && peopleNum >= 1) {
       //x = percent / 100
       //y = x * bill
       //tipAmountPerPerson = y / number of people
@@ -27,13 +34,18 @@ const Calculator = () => {
       const totalPerPerson = bill / peopleNum + tipAmountPerPerson;
       setTipAmount(tipAmountPerPerson.toFixed(2));
       setTotal(totalPerPerson.toFixed(2));
+    } else {
+      setTipAmount("");
+      setTotal("");
     }
   }, [custom, bill, tipPercent, peopleNum]);
 
   //add error class
   const isError = (e) => {
-    if (parseInt(e.target.value) === 0) {
+    if (parseInt(e.target.value) <= 0) {
       e.target.parentNode.classList.add("error");
+      setTipAmount("");
+      setTotal("");
     } else {
       e.target.parentNode.classList.remove("error");
     }
@@ -171,14 +183,15 @@ const Calculator = () => {
           </label>
           <div className="calculator__input-wrapper calculator__input-wrapper--person">
             <input
-              className="calculator__people"
+              className={"calculator__people"}
               type="number"
+              title="Numbers only"
               id="people"
               name="people"
               placeholder="0"
               value={peopleNum}
               onChange={(e) => {
-                setPeopleNum(e.target.value);
+                setPeopleNum(Math.floor(e.target.value));
                 isError(e);
               }}
             />
